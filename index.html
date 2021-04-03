@@ -13,7 +13,9 @@
   <link rel="stylesheet" href="dist/theme/moon.css" id="theme">
   <!-- Theme used for syntax highlighting of code -->
   <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme"/>
-
+  <!-- Styles for CopyCode button -->
+  <link rel="stylesheet" href="plugin/copycode/copycode.css" />
+  <!-- Gist Github -->
   <style type="text/css">
     .gist {width:900px !important;}
     .gist-file
@@ -94,9 +96,8 @@
       <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/sky.css'); return false;">Sky</a> -
       <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/solarized.css'); return false;">Solarized</a> -
       <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/white.css'); return false;">White</a>
-      <pre><code data-trim><script type="text/template">
-        <link rel="stylesheet" href="dist/theme/moon.css" id="theme">
-      </script></code></pre>
+      <pre><code class="hljs html"><link rel="stylesheet" href="dist/theme/beige.css" id="theme"></code></pre>
+    </section>
     </section>
   </div>
 </div>
@@ -105,16 +106,33 @@
 <script src="plugin/notes/notes.js"></script>
 <script src="plugin/markdown/markdown.js"></script>
 <script src="plugin/highlight/highlight.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+<script src="plugin/copycode/copycode.js"></script>
 <script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-				<!-- Transition style -->
+				// Configurations for Copy Copy Plugin.
+        copycode: {
+          copy: "Copy",
+          copied: "Copied!",
+          timeout: 1000,
+          copybg: "orange",
+          copiedbg: "green",
+          copycolor: "black",
+          copiedcolor: "white",
+        },
+				// Transition style.
         transition: 'convex',
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          CopyCode,
+          RevealNotes,
+        ],
 			});
 </script>
 </body>
