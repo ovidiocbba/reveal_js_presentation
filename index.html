@@ -38,7 +38,8 @@
       <ul type="1">
         <li>Introduction</li>
         <li>Installation</li>
-         </ul>
+        <li>Themes</li>
+      </ul>
     </section>
     <section>
       <h1>Introduction</h1>
@@ -77,7 +78,26 @@
       <h2>index.html</h2>
       <script src="https://gist.github.com/ovidiocbba/70f20a2c7ed507f12694e0667e22e27a.js"></script>
     </section>
-    <section>Slide 2</section>
+    <section>
+      <h2>Themes</h2>
+      <p>Reveal.js comes with a few themes built in:</p>
+      <!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/black.css'); return false;">Black (default)</a> -
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/beige.css'); return false;">Beige</a> -
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/blood.css'); return false;">Blood</a> -
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/league.css'); return false;">League</a> -
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/moon.css'); return false;">Moon</a> -
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/night.css'); return false;">Night</a> -
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/serif.css'); return false;">Serif</a> -
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/sky.css'); return false;">Sky</a> -
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/simple.css'); return false;">Simple</a> -
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/sky.css'); return false;">Sky</a> -
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/solarized.css'); return false;">Solarized</a> -
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/white.css'); return false;">White</a>
+      <pre><code data-trim><script type="text/template">
+        <link rel="stylesheet" href="dist/theme/moon.css" id="theme">
+      </script></code></pre>
+    </section>
   </div>
 </div>
 
