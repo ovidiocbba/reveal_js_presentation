@@ -98,7 +98,19 @@
       <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/white.css'); return false;">White</a>
       <pre><code class="hljs html"><link rel="stylesheet" href="dist/theme/beige.css" id="theme"></code></pre>
     </section>
+    <section id="transitions">
+      <h2>Transitions Styles</h2>
+      <p>You can select from different transitions, like: <br>
+        <a href="?transition=none#/transitions">None</a> -
+        <a href="?transition=fade#/transitions">Fade</a> -
+        <a href="?transition=slide#/transitions">Slide</a> -
+        <a href="?transition=convex#/transitions">Convex</a> -
+        <a href="?transition=concave#/transitions">Concave</a> -
+        <a href="?transition=zoom#/transitions">Zoom</a>
+      </p>
+      <pre><code class="hljs javascript">transition: 'convex', // none/fade/slide/convex/concave/zoom.</code></pre>
     </section>
+
   </div>
 </div>
 
@@ -113,6 +125,8 @@
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
+				// Transition style.
+        transition: 'convex', // none/fade/slide/convex/concave/zoom.
 				hash: true,
 				// Configurations for Copy Copy Plugin.
         copycode: {
@@ -124,8 +138,6 @@
           copycolor: "black",
           copiedcolor: "white",
         },
-				// Transition style.
-        transition: 'convex',
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [
           RevealMarkdown,
