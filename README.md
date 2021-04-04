@@ -7,10 +7,14 @@ Page:
 https://ovidiomiranda.gitlab.io/reveal_js_presentation
 
 Learn more about GitLab Pages at:  
-https://pages.gitlab.io  
-The official documentation  
-https://docs.gitlab.com/ce/user/project/pages/.  
+https://pages.gitlab.io<br/>
+The official documentation<br/>
+https://docs.gitlab.com/ce/user/project/pages/<br/>
 Examples:  
 https://gitlab.com/pages 
 
 ---
+GitHub Page:<br/>
+https://ovidiocbba.github.io/reveal_js_presentation/<br/>
+Learn more about GitHub Pages at:<br/>
+https://guides.github.com/features/pages/
