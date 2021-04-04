@@ -14,7 +14,7 @@
   <!-- Theme used for syntax highlighting of code -->
   <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme"/>
   <!-- Styles for CopyCode button -->
-  <link rel="stylesheet" href="plugin/copycode/copycode.css" />
+  <link rel="stylesheet" href="plugin/copycode/copycode.css"/>
   <!-- Gist Github -->
   <style type="text/css">
     .gist {width:900px !important;}
@@ -41,6 +41,8 @@
         <li>Introduction</li>
         <li>Installation</li>
         <li>Themes</li>
+        <li>Transitions Styles</li>
+        <li>Vertical Slides</li>
       </ul>
     </section>
     <section>
@@ -110,7 +112,34 @@
       </p>
       <pre><code class="hljs javascript">transition: 'convex', // none/fade/slide/convex/concave/zoom.</code></pre>
     </section>
-
+    <section>
+      <section id="vertical_slides">
+        <h2>Vertical Slides</h2>
+        <p>Slides can be nested inside of each other.</p>
+        <pre><code data-trim class="hljs html">
+            <section>Horizontal Slide</section>
+            <section>
+              <section>Level 1</section>
+              <section>Level 2</section>
+            </section>
+        </code></pre>
+        <a href="#/level_1">
+        <img class="r-frame" style="background: rgba(255,255,255,0.1);" width="178" height="238" alt="Down arrow" src="https://static.slid.es/reveal/arrow.png" data-lazy-loaded="">
+        </a>
+      </section>
+      <section id="level_1">
+        <h2>Level 1</h2>
+        <p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+      </section>
+      <section>
+        <h2>Level 2</h2>
+        <p>That's it, time to go back up.</p><br>
+        <a href="#/vertical_slides">
+          <img class="r-frame" style="background: rgba(255,255,255,0.1); transform: rotate(180deg);" width="178" height="238" alt="Up arrow" src="https://static.slid.es/reveal/arrow.png"
+               data-lazy-loaded="">
+        </a>
+      </section>
+    </section>
   </div>
 </div>
 
