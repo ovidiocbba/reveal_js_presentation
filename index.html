@@ -37,7 +37,7 @@
     </section>
     <section>
       <h2>Agenda</h2>
-      <ul type="1">
+      <ul>
         <li><a href="#/introduction">Introduction</a></li>
         <li><a href="#/installation">Installation</a></li>
         <li><a href="#/customization">Customization</a></li>
@@ -45,7 +45,17 @@
           <li><a href="#/themes">Themes</a></li>
           <li><a href="#/transitions">Transitions Styles</a></li>
         </ul>
-        <li>Vertical Slides</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Agenda</h2>
+      <ul>
+        <li><a href="#/features">Features</a></li>
+        <ul>
+          <li><a href="#/vertical_slides">Vertical Slides</a></li>
+          <li><a href="#/transitions">Transitions Styles</a></li>
+          <li><a href="#/fragments">Fragments</a></li>
+        </ul>
       </ul>
     </section>
     <section id="introduction">
@@ -145,6 +155,93 @@
                data-lazy-loaded="">
         </a>
       </section>
+
+    </section>
+    <section id="fragments">
+      <h2>Fragments</h2>
+      <p>Hit the next arrow...</p>
+      <p class="fragment visible" data-fragment-index="0">... to step through ...</p>
+      <p>
+        <span class="fragment visible" data-fragment-index="1">... a</span>
+        <span class="fragment visible" data-fragment-index="2">fragmented</span>
+        <span class="fragment visible current-fragment" data-fragment-index="3">slide.</span>
+      </p>
+      <aside class="notes">This slide has fragments which are also stepped through in the notes window.</aside>
+    </section>
+    <section>
+      <h2>Fragments</h2>
+      <p>Example: </p>
+      <pre><code data-trim class="hljs html">
+            <section>
+                <p class="fragment">Fragment 1</p>
+                <p class="fragment">Fragment 2</p>
+                <p class="fragment">Fragment 3</p>
+            </section>
+        </code></pre>
+          <p class="fragment">Fragment 1</p>
+          <p class="fragment">Fragment 2</p>
+          <p class="fragment">Fragment 3</p>
+      <p><a href="https://revealjs.com/fragments/" target="_blank" class="fragment visible">https://revealjs.com/fragments/</a></p>
+    </section>
+
+    <section>
+      <h2>Fragment Styles</h2>
+      <p>There's different types of fragments, like:</p>
+      <p class="fragment grow" data-fragment-index="3">grow</p>
+      <p class="fragment shrink" data-fragment-index="2">shrink</p>
+      <p class="fragment strike" data-fragment-index="1">strike</p>
+      <pre><code data-trim class="hljs html">
+            <section>
+              <p class="fragment grow" data-fragment-index="3">grow</p>
+              <p class="fragment shrink" data-fragment-index="2">shrink</p>
+              <p class="fragment strike" data-fragment-index="1">strike</p>
+            </section>
+        </code></pre>
+    </section>
+
+    <section>
+      <h2>Fragment Styles</h2>
+      <p class="fragment fade-right">fade-right</p>
+      <p class="fragment fade-up">fade-up</p>
+      <p class="fragment fade-down">fade-down</p>
+      <p class="fragment fade-left">fade-left</p>
+      <pre><code data-trim class="hljs html" style="font-size:20px;">
+            <section>
+              <p class="fragment fade-right">fade-right</p>
+              <p class="fragment fade-up">fade-up</p>
+              <p class="fragment fade-down">fade-down</p>
+              <p class="fragment fade-left">fade-left</p>
+            </section>
+        </code></pre>
+    </section>
+
+    <section>
+      <h2>Fragment Styles</h2>
+      <p class="fragment">Fade in</p>
+      <p class="fragment fade-out">Fade out</p>
+      <p class="fragment fade-in-then-out">Fade in, then out</p>
+      <p class="fragment fade-in-then-semi-out">Fade in, then semi out</p>
+      <pre><code data-trim class="hljs html" style="font-size:20px;">
+            <section>
+              <p class="fragment">Fade in</p>
+              <p class="fragment fade-out">Fade out</p>
+              <p class="fragment fade-in-then-out">Fade in, then out</p>
+              <p class="fragment fade-in-then-semi-out">Fade in, then semi out</p>
+            </section>
+        </code></pre>
+    </section>
+    <section>
+      <h2>Fragment Styles</h2>
+      <p class="fragment highlight-red">Highlight red</p>
+      <p class="fragment highlight-green">Highlight green</p>
+      <p class="fragment highlight-blue">Highlight blue</p>
+      <pre><code data-trim class="hljs html" style="font-size:20px;">
+            <section>
+              <p class="fragment highlight-red">Highlight red</p>
+              <p class="fragment highlight-green">Highlight green</p>
+              <p class="fragment highlight-blue">Highlight blue</p>
+            </section>
+        </code></pre>
     </section>
   </div>
 </div>
