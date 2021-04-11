@@ -2,9 +2,13 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="author" content="Simon Ovidio Miranda Chiri">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Reveal.js Framework</title>
+
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="author" content="Simon Ovidio Miranda Chiri">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
   <link rel="shortcut icon" href="img/reveal-symbol.svg">
 
   <link rel="stylesheet" href="dist/reset.css">
@@ -435,6 +439,29 @@
           </section>
       </code></pre>
     </section>
+    <section>
+      <h2>Export to Pdf</h2>
+      <ol>
+        <li>Open your presentation with: <pre><code class="hljs html">?print-pdf </code></pre></li>
+        <p style="font-size:30px;">
+          <a href="https://ovidiomiranda.gitlab.io/reveal_js_presentation/?print-pdf" target="_blank">https://ovidiomiranda.gitlab.io/reveal_js_presentation/?print-pdf</a>
+        </p>
+        <li>Open the in-browser print dialog (CTRL+P).</li>
+        <li>Set the following settings.</li>
+        <center><img  data-src="img/setting_export_pdf.png"  width="300" height="250"></center>
+      </ol>
+    </section>
+    <section>
+      <h2>Export to Pdf</h2>
+      <p>Separate Pages for Fragments</p>
+      <pre><code data-trim class="hljs javascript">
+          Reveal.initialize({ pdfSeparateFragments: false })
+      </code></pre>
+      <p>Page Numbers</p>
+      <pre><code data-trim class="hljs javascript">
+          Reveal.initialize({ showSlideNumber: 'print' })
+      </code></pre>
+    </section>
   </div>
 </div>
 
@@ -453,6 +480,10 @@
         transition: 'convex', // none/fade/slide/convex/concave/zoom.
         // Background Transition.
         backgroundTransition: 'convex',
+        // Printing all fragments in their visible states on the same slide.
+        pdfSeparateFragments: false,
+        // Only show slide numbers when printing to PDF.
+        showSlideNumber: 'print',
 				hash: true,
 				// Configurations for Copy Copy Plugin.
         copycode: {
