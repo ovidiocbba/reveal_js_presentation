@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="author" content="Simon Ovidio Miranda Chiri">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Reveal.js Framework</title>
   <link rel="shortcut icon" href="img/reveal-symbol.svg">
@@ -388,6 +389,52 @@
         &ldquo;Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard.&rdquo;
       </blockquote>
     </section>
+    <section id="Backgrounds">
+      <h1>Backgrounds</h1>
+    </section>
+    <section data-background="#3b1e66">
+      <h2>Slide Backgrounds</h2>
+      <p>With data-background you can change the background color of a specific slide. All CSS colors are supported</p>
+      <pre><code data-trim class="hljs html">
+          <section data-background="#3b1e66">
+            <h2>Slide Backgrounds</h2>
+          </section>
+      </code></pre>
+    </section>
+    <section data-background="img/tech_background.jpg">
+      <h2>Image Backgrounds</h2>
+      <p>You can also change the background image of a slide.</p>
+      <pre><code data-trim class="hljs html">
+          <section data-background="img/tech_background.jpg">
+            <h2>Image Backgrounds</h2>
+          </section>
+      </code></pre>
+    </section>
+    <section data-background-video="video/video_background.mp4">
+      <h2>Video Backgrounds</h2>
+      <pre><code data-trim class="hljs html">
+          <section data-background-video="video/video_background.mp4">
+            <h2>Video Backgrounds</h2>
+          </section>
+      </code></pre>
+    </section>
+    <section data-background="img/jim_carrey_typing.gif">
+      <h2>GIF Backgrounds</h2>
+      <pre><code data-trim class="hljs html">
+          <section data-background="img/jim_carrey_typing.gif">
+            <h2>GIF Backgrounds</h2>
+          </section>
+      </code></pre>
+    </section>
+    <section data-background="#b5533c" data-background-transition="zoom">
+      <h2>Background Transitions</h2>
+      <p>You can override background transitions per-slide.</p>
+      <pre><code data-trim class="hljs html">
+          <section data-background="#b5533c" data-background-transition="zoom">
+            <h2>Background Transitions</h2>
+          </section>
+      </code></pre>
+    </section>
   </div>
 </div>
 
@@ -404,6 +451,8 @@
 			Reveal.initialize({
 				// Transition style.
         transition: 'convex', // none/fade/slide/convex/concave/zoom.
+        // Background Transition.
+        backgroundTransition: 'convex',
 				hash: true,
 				// Configurations for Copy Copy Plugin.
         copycode: {
