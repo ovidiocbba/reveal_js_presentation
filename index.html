@@ -457,10 +457,65 @@
       <pre><code data-trim class="hljs javascript">
           Reveal.initialize({ pdfSeparateFragments: false })
       </code></pre>
-      <p>Page Numbers</p>
-      <pre><code data-trim class="hljs javascript">
-          Reveal.initialize({ showSlideNumber: 'print' })
+      <!--      <p>Page Numbers</p>-->
+      <!--      <pre><code data-trim class="hljs javascript">-->
+      <!--          Reveal.initialize({ showSlideNumber: 'print' })-->
+      <!--      </code></pre>-->
+    </section>
+    <section>
+      <h2>Pretty Code</h2>
+      <p>Make sure that a syntax highlight theme is included in your document. We include Monokai by default.</p>
+      <pre><code class="hljs html" data-trim>
+            <!-- Theme used for syntax highlighting of code -->
+            <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme"/>
+
+            <script src="plugin/highlight/highlight.js"></script>
+
+            <script>
+              Reveal.initialize({
+                plugins: [ RevealHighlight ]
+              });
+            </script>
       </code></pre>
+    </section>
+    <section>
+      <h2>Pretty Code</h2>
+      <pre><code data-trim class="hljs html">
+        <section>
+          <h2>Pretty Code</h2>
+          <pre><code class="hljs java" data-trim>
+                public int getAverage(int[] marks) {
+                   return (int) IntStream.of(marks).average().orElse(Double.NaN);
+                }
+          </code></pre>
+        </section>
+      </code></pre>
+      <p>Code syntax highlighting courtesy of <a href="https://highlightjs.org/usage/" target="_blank">highlight.js</a>.</p>
+      <pre><code class="hljs java" data-trim>
+            public int getAverage(int[] marks) {
+              return (int) IntStream.of(marks).average().orElse(Double.NaN);
+            }
+      </code></pre>
+    </section>
+    <section>
+      <h2>Pretty Code</h2>
+      <pre data-cc="false"><code class="hljs java" data-trim data-line-numbers="2|3-6|7|8-9">
+            public Boolean validate(String eanCode) {
+                String twelveDigits = eanCode.substring(0, eanCode.length() - 1);
+                int result = Stream.of(twelveDigits.split(""))
+                        .mapToInt(Integer::parseInt)
+                        .map(number -> number % TWO == 0 ? number : number * TREE)
+                        .sum();
+                int calcChecksum = (result % TEN == 0) ? 0 : TEN - (result % TEN);
+                int lastNumber = Integer.parseInt(eanCode.substring(eanCode.length() - 1));
+                return calcChecksum == lastNumber;
+            }
+      </code></pre>
+      <pre data-cc="false"><code class="hljs html" data-trim>
+      <pre><code class="hljs java" data-trim data-line-numbers="2|3-6|7|8-9">
+           Example code.
+      </code></pre>
+       </code></pre>
     </section>
   </div>
 </div>
