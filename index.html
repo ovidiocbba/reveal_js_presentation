@@ -60,22 +60,22 @@
       </ul>
     </section>
     <section>
-    <h2>Agenda</h2>
-    <ul>
-      <li><a href="#/customization">Customization</a></li>
+      <h2>Agenda</h2>
       <ul>
-        <li><a href="#/themes">Themes</a></li>
-        <li><a href="#/transitions">Transitions Styles</a></li>
+        <li><a href="#/customization">Customization</a></li>
+        <ul>
+          <li><a href="#/themes">Themes</a></li>
+          <li><a href="#/transitions">Transitions Styles</a></li>
+        </ul>
+        <li><a href="#/features">Features</a></li>
+        <ul>
+          <li><a href="#/vertical_slides">Vertical Slides</a></li>
+          <li><a href="#/pdf_export">PDF Export</a></li>
+          <li><a href="#/overview_mode">Overview Mode</a></li>
+          <li><a href="#/fullscreen_mode">Fullscreen mode</a></li>
+        </ul>
       </ul>
-      <li><a href="#/features">Features</a></li>
-      <ul>
-        <li><a href="#/vertical_slides">Vertical Slides</a></li>
-        <li><a href="#/pdf_export">PDF Export</a></li>
-        <li><a href="#/overview_mode">Overview Mode</a></li>
-        <li><a href="#/fullscreen_mode">Fullscreen mode</a></li>
-      </ul>
-    </ul>
-  </section>
+    </section>
     <section>
       <h2>Agenda</h2>
       <ul>
@@ -86,16 +86,6 @@
         </ul>
         <li><a href="#/extras">Extras</a></li>
         <li><a href="#/resources">Resources</a></li>
-      </ul>
-    </section>
-    <section>
-      <h2>Agenda</h2>
-      <ul>
-        <li><a href="#/features">Features</a></li>
-        <ul>
-          <li><a href="#/vertical_slides">Vertical Slides</a></li>
-          <li><a href="#/fragments">Fragments</a></li>
-        </ul>
       </ul>
     </section>
     <section id="introduction">
@@ -135,69 +125,117 @@
       <h2>index.html</h2>
       <script src="https://gist.github.com/ovidiocbba/70f20a2c7ed507f12694e0667e22e27a.js"></script>
     </section>
-    <section id="customization">
-      <h1>Customization</h1>
+    <section id="content">
+      <h1>Content</h1>
     </section>
-    <section id="themes">
-      <h2>Themes</h2>
-      <p>Reveal.js comes with a few themes built in:</p>
-      <!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/black.css'); return false;">Black (default)</a> -
-      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/beige.css'); return false;">Beige</a> -
-      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/blood.css'); return false;">Blood</a> -
-      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/league.css'); return false;">League</a> -
-      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/moon.css'); return false;">Moon</a> -
-      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/night.css'); return false;">Night</a> -
-      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/serif.css'); return false;">Serif</a> -
-      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/sky.css'); return false;">Sky</a> -
-      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/simple.css'); return false;">Simple</a> -
-      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/sky.css'); return false;">Sky</a> -
-      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/solarized.css'); return false;">Solarized</a> -
-      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/white.css'); return false;">White</a>
-      <pre><code class="hljs html"><link rel="stylesheet" href="dist/theme/beige.css" id="theme"></code></pre>
+    <section id="backgrounds">
+      <h1>Backgrounds</h1>
     </section>
-    <section id="transitions">
-      <h2>Transitions Styles</h2>
-      <p>You can select from different transitions, like: <br>
-        <a href="?transition=none#/transitions">None</a> -
-        <a href="?transition=fade#/transitions">Fade</a> -
-        <a href="?transition=slide#/transitions">Slide</a> -
-        <a href="?transition=convex#/transitions">Convex</a> -
-        <a href="?transition=concave#/transitions">Concave</a> -
-        <a href="?transition=zoom#/transitions">Zoom</a>
-      </p>
-      <pre><code class="hljs javascript">transition: 'convex', // none/fade/slide/convex/concave/zoom.</code></pre>
+    <section data-background="#3b1e66">
+      <h2>Slide Backgrounds</h2>
+      <p>With data-background you can change the background color of a specific slide. All CSS colors are supported</p>
+      <pre><code data-trim class="hljs html">
+          <section data-background="#3b1e66">
+            <h2>Slide Backgrounds</h2>
+          </section>
+      </code></pre>
+    </section>
+    <section data-background="img/tech_background.jpg">
+      <h2>Image Backgrounds</h2>
+      <p>You can also change the background image of a slide.</p>
+      <pre><code data-trim class="hljs html">
+          <section data-background="img/tech_background.jpg">
+            <h2>Image Backgrounds</h2>
+          </section>
+      </code></pre>
+    </section>
+    <section data-background-video="video/video_background.mp4">
+      <h2>Video Backgrounds</h2>
+      <pre><code data-trim class="hljs html">
+          <section data-background-video="video/video_background.mp4">
+            <h2>Video Backgrounds</h2>
+          </section>
+      </code></pre>
+    </section>
+    <section data-background="img/jim_carrey_typing.gif">
+      <h2>GIF Backgrounds</h2>
+      <pre><code data-trim class="hljs html">
+          <section data-background="img/jim_carrey_typing.gif">
+            <h2>GIF Backgrounds</h2>
+          </section>
+      </code></pre>
+    </section>
+    <section data-background="#b5533c" data-background-transition="zoom">
+      <h2>Background Transitions</h2>
+      <p>You can override background transitions per-slide.</p>
+      <pre><code data-trim class="hljs html">
+          <section data-background="#b5533c" data-background-transition="zoom">
+            <h2>Background Transitions</h2>
+          </section>
+      </code></pre>
+    </section>
+    <section id="code">
+      <h1>Code</h1>
     </section>
     <section>
-      <section id="vertical_slides">
-        <h2>Vertical Slides</h2>
-        <p>Slides can be nested inside of each other.</p>
-        <pre><code data-trim class="hljs html">
-            <section>Horizontal Slide</section>
-            <section>
-              <section>Level 1</section>
-              <section>Level 2</section>
-            </section>
-        </code></pre>
-        <a href="#/level_1">
-          <img class="r-frame" style="background: rgba(255,255,255,0.1);" width="178" height="238" alt="Down arrow" src="https://static.slid.es/reveal/arrow.png" data-lazy-loaded="">
-        </a>
-      </section>
-      <section id="level_1">
-        <h2>Level 1</h2>
-        <p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-      </section>
-      <section>
-        <h2>Level 2</h2>
-        <p>That's it, time to go back up.</p><br>
-        <a href="#/vertical_slides">
-          <img class="r-frame" style="background: rgba(255,255,255,0.1); transform: rotate(180deg);" width="178" height="238" alt="Up arrow" src="https://static.slid.es/reveal/arrow.png"
-               data-lazy-loaded="">
-        </a>
-      </section>
+      <h2>Pretty Code</h2>
+      <p>Make sure that a syntax highlight theme is included in your document. We include Monokai by default.</p>
+      <pre><code class="hljs html" data-trim>
+            <!-- Theme used for syntax highlighting of code -->
+            <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme"/>
 
+            <script src="plugin/highlight/highlight.js"></script>
+
+            <script>
+              Reveal.initialize({
+                plugins: [ RevealHighlight ]
+              });
+            </script>
+      </code></pre>
+    </section>
+    <section>
+      <h2>Pretty Code</h2>
+      <pre><code data-trim class="hljs html">
+        <section>
+          <h2>Pretty Code</h2>
+          <pre><code class="hljs java" data-trim>
+                public int getAverage(int[] marks) {
+                   return (int) IntStream.of(marks).average().orElse(Double.NaN);
+                }
+          </code></pre>
+        </section>
+      </code></pre>
+      <p>Code syntax highlighting courtesy of <a href="https://highlightjs.org/usage/" target="_blank">highlight.js</a>.</p>
+      <pre><code class="hljs java" data-trim>
+            public int getAverage(int[] marks) {
+              return (int) IntStream.of(marks).average().orElse(Double.NaN);
+            }
+      </code></pre>
+    </section>
+    <section>
+      <h2>Pretty Code</h2>
+      <pre data-cc="false"><code class="hljs java" data-trim data-line-numbers="2|3-6|7|8-9">
+            public Boolean validate(String eanCode) {
+                String twelveDigits = eanCode.substring(0, eanCode.length() - 1);
+                int result = Stream.of(twelveDigits.split(""))
+                        .mapToInt(Integer::parseInt)
+                        .map(number -> number % TWO == 0 ? number : number * TREE)
+                        .sum();
+                int calcChecksum = (result % TEN == 0) ? 0 : TEN - (result % TEN);
+                int lastNumber = Integer.parseInt(eanCode.substring(eanCode.length() - 1));
+                return calcChecksum == lastNumber;
+            }
+      </code></pre>
+      <pre data-cc="false"><code class="hljs html" data-trim>
+      <pre><code class="hljs java" data-trim data-line-numbers="2|3-6|7|8-9">
+           Example code.
+      </code></pre>
+       </code></pre>
     </section>
     <section id="fragments">
+      <h1>Fragments</h1>
+    </section>
+    <section>
       <h2>Fragments</h2>
       <p>Hit the next arrow...</p>
       <p class="fragment visible" data-fragment-index="0">... to step through ...</p>
@@ -428,62 +466,85 @@
         &ldquo;Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard.&rdquo;
       </blockquote>
     </section>
-    <section id="Backgrounds">
-      <h1>Backgrounds</h1>
+    <section id="customization">
+      <h1>Customization</h1>
     </section>
-    <section data-background="#3b1e66">
-      <h2>Slide Backgrounds</h2>
-      <p>With data-background you can change the background color of a specific slide. All CSS colors are supported</p>
-      <pre><code data-trim class="hljs html">
-          <section data-background="#3b1e66">
-            <h2>Slide Backgrounds</h2>
-          </section>
-      </code></pre>
+    <section id="themes">
+      <h2>Themes</h2>
+      <p>Reveal.js comes with a few themes built in:</p>
+      <!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/black.css'); return false;">Black (default)</a> -
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/beige.css'); return false;">Beige</a> -
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/blood.css'); return false;">Blood</a> -
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/league.css'); return false;">League</a> -
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/moon.css'); return false;">Moon</a> -
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/night.css'); return false;">Night</a> -
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/serif.css'); return false;">Serif</a> -
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/sky.css'); return false;">Sky</a> -
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/simple.css'); return false;">Simple</a> -
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/sky.css'); return false;">Sky</a> -
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/solarized.css'); return false;">Solarized</a> -
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','dist/theme/white.css'); return false;">White</a>
+      <pre><code class="hljs html"><link rel="stylesheet" href="dist/theme/beige.css" id="theme"></code></pre>
     </section>
-    <section data-background="img/tech_background.jpg">
-      <h2>Image Backgrounds</h2>
-      <p>You can also change the background image of a slide.</p>
-      <pre><code data-trim class="hljs html">
-          <section data-background="img/tech_background.jpg">
-            <h2>Image Backgrounds</h2>
-          </section>
-      </code></pre>
+    <section id="transitions">
+      <h2>Transitions Styles</h2>
+      <p>You can select from different transitions, like: <br>
+        <a href="?transition=none#/transitions">None</a> -
+        <a href="?transition=fade#/transitions">Fade</a> -
+        <a href="?transition=slide#/transitions">Slide</a> -
+        <a href="?transition=convex#/transitions">Convex</a> -
+        <a href="?transition=concave#/transitions">Concave</a> -
+        <a href="?transition=zoom#/transitions">Zoom</a>
+      </p>
+      <pre><code class="hljs javascript">transition: 'convex', // none/fade/slide/convex/concave/zoom.</code></pre>
     </section>
-    <section data-background-video="video/video_background.mp4">
-      <h2>Video Backgrounds</h2>
-      <pre><code data-trim class="hljs html">
-          <section data-background-video="video/video_background.mp4">
-            <h2>Video Backgrounds</h2>
-          </section>
-      </code></pre>
+    <section id="features">
+      <h1>Features</h1>
     </section>
-    <section data-background="img/jim_carrey_typing.gif">
-      <h2>GIF Backgrounds</h2>
-      <pre><code data-trim class="hljs html">
-          <section data-background="img/jim_carrey_typing.gif">
-            <h2>GIF Backgrounds</h2>
-          </section>
-      </code></pre>
+    <section>
+      <section id="vertical_slides">
+        <h2>Vertical Slides</h2>
+        <p>Slides can be nested inside of each other.</p>
+        <pre><code data-trim class="hljs html">
+            <section>Horizontal Slide</section>
+            <section>
+              <section>Level 1</section>
+              <section>Level 2</section>
+            </section>
+        </code></pre>
+        <a href="#/level_1">
+          <img class="r-frame" style="background: rgba(255,255,255,0.1);" width="178" height="238" alt="Down arrow" src="https://static.slid.es/reveal/arrow.png" data-lazy-loaded="">
+        </a>
+      </section>
+      <section id="level_1">
+        <h2>Level 1</h2>
+        <p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+      </section>
+      <section>
+        <h2>Level 2</h2>
+        <p>That's it, time to go back up.</p><br>
+        <a href="#/vertical_slides">
+          <img class="r-frame" style="background: rgba(255,255,255,0.1); transform: rotate(180deg);" width="178" height="238" alt="Up arrow" src="https://static.slid.es/reveal/arrow.png"
+               data-lazy-loaded="">
+        </a>
+      </section>
     </section>
-    <section data-background="#b5533c" data-background-transition="zoom">
-      <h2>Background Transitions</h2>
-      <p>You can override background transitions per-slide.</p>
-      <pre><code data-trim class="hljs html">
-          <section data-background="#b5533c" data-background-transition="zoom">
-            <h2>Background Transitions</h2>
-          </section>
-      </code></pre>
+    <section id="pdf_export">
+      <h1>Pdf Export</h1>
     </section>
     <section>
       <h2>Export to Pdf</h2>
       <ol>
-        <li>Open the presentation with Google Chrome adding <pre><code class="hljs html">?print-pdf </code></pre></li>
+        <li>Open the presentation with Google Chrome adding
+          <pre><code class="hljs html">?print-pdf </code></pre>
+        </li>
         <p style="font-size:30px;">
           <a href="https://ovidiomiranda.gitlab.io/reveal_js_presentation/?print-pdf" target="_blank">https://ovidiomiranda.gitlab.io/reveal_js_presentation/?print-pdf</a>
         </p>
         <li>Open the in-browser print dialog (CTRL+P).</li>
         <li>Set the following settings.</li>
-        <center><img  data-src="img/setting_export_pdf.png"  width="300" height="250"></center>
+        <center><img data-src="img/setting_export_pdf.png" width="300" height="250"></center>
       </ol>
     </section>
     <section>
@@ -496,61 +557,6 @@
       <!--      <pre><code data-trim class="hljs javascript">-->
       <!--          Reveal.initialize({ showSlideNumber: 'print' })-->
       <!--      </code></pre>-->
-    </section>
-    <section>
-      <h2>Pretty Code</h2>
-      <p>Make sure that a syntax highlight theme is included in your document. We include Monokai by default.</p>
-      <pre><code class="hljs html" data-trim>
-            <!-- Theme used for syntax highlighting of code -->
-            <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme"/>
-
-            <script src="plugin/highlight/highlight.js"></script>
-
-            <script>
-              Reveal.initialize({
-                plugins: [ RevealHighlight ]
-              });
-            </script>
-      </code></pre>
-    </section>
-    <section>
-      <h2>Pretty Code</h2>
-      <pre><code data-trim class="hljs html">
-        <section>
-          <h2>Pretty Code</h2>
-          <pre><code class="hljs java" data-trim>
-                public int getAverage(int[] marks) {
-                   return (int) IntStream.of(marks).average().orElse(Double.NaN);
-                }
-          </code></pre>
-        </section>
-      </code></pre>
-      <p>Code syntax highlighting courtesy of <a href="https://highlightjs.org/usage/" target="_blank">highlight.js</a>.</p>
-      <pre><code class="hljs java" data-trim>
-            public int getAverage(int[] marks) {
-              return (int) IntStream.of(marks).average().orElse(Double.NaN);
-            }
-      </code></pre>
-    </section>
-    <section>
-      <h2>Pretty Code</h2>
-      <pre data-cc="false"><code class="hljs java" data-trim data-line-numbers="2|3-6|7|8-9">
-            public Boolean validate(String eanCode) {
-                String twelveDigits = eanCode.substring(0, eanCode.length() - 1);
-                int result = Stream.of(twelveDigits.split(""))
-                        .mapToInt(Integer::parseInt)
-                        .map(number -> number % TWO == 0 ? number : number * TREE)
-                        .sum();
-                int calcChecksum = (result % TEN == 0) ? 0 : TEN - (result % TEN);
-                int lastNumber = Integer.parseInt(eanCode.substring(eanCode.length() - 1));
-                return calcChecksum == lastNumber;
-            }
-      </code></pre>
-      <pre data-cc="false"><code class="hljs html" data-trim>
-      <pre><code class="hljs java" data-trim data-line-numbers="2|3-6|7|8-9">
-           Example code.
-      </code></pre>
-       </code></pre>
     </section>
   </div>
 </div>
