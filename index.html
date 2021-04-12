@@ -232,6 +232,60 @@
       </code></pre>
        </code></pre>
     </section>
+    <section id="math">
+      <h1>Math</h1>
+    </section>
+    <section>
+      <h2>Math</h2>
+      <pre><code data-trim class="hljs html">
+          <script src="plugin/math/math.js"></script>
+
+          <script>
+            Reveal.initialize({
+              math: {
+                mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+                config: 'TeX-AMS_HTML-full',
+                // Pass other options into `MathJax.Hub.Config()`.
+                TeX: { Macros: { RR: "{\\bf R}" } }
+              },
+              plugins: [ RevealMath ]
+            });
+          </script>
+      </code></pre>
+    </section>
+    <section>
+      <h2>Math</h2>
+      <p>The Lorenz Equations</p>
+      \[\begin{aligned}
+      \dot{x} &amp; = \sigma(y-x) \\
+      \dot{y} &amp; = \rho x - y - xz \\
+      \dot{z} &amp; = -\beta z + xy
+      \end{aligned} \]
+    </section>
+    <section>
+      <h2>Math</h2>
+      <p>The Cauchy-Schwarz Inequality</p>
+        \[ \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right) \]
+    </section>
+    <section>
+      <h2>Math</h2>
+      <p>A Cross Product Formula</p>
+      \[\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}
+      \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+      \frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \\
+      \frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0
+      \end{vmatrix}  \]
+    </section>
+    <section>
+      <h2>Math</h2>
+      <p>Maxwell&#8217;s Equations</p>
+      \[  \begin{aligned}
+      \nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &amp; = \frac{4\pi}{c}\vec{\mathbf{j}} \\   \nabla \cdot \vec{\mathbf{E}} &amp; = 4 \pi \rho \\
+      \nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} &amp; = \vec{\mathbf{0}} \\
+      \nabla \cdot \vec{\mathbf{B}} &amp; = 0 \end{aligned}
+      \]
+    </section>
+    </section>
     <section id="fragments">
       <h1>Fragments</h1>
     </section>
@@ -567,6 +621,7 @@
 <script src="plugin/highlight/highlight.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
 <script src="plugin/copycode/copycode.js"></script>
+<script src="plugin/math/math.js"></script>
 <script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -591,12 +646,19 @@
           copycolor: "black",
           copiedcolor: "white",
         },
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          // pass other options into `MathJax.Hub.Config()`
+          TeX: { Macros: { RR: "{\\bf R}" } }
+        },
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [
           RevealMarkdown,
           RevealHighlight,
           CopyCode,
           RevealNotes,
+          RevealMath
         ],
 			});
 </script>
