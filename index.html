@@ -624,6 +624,82 @@
       <!--          Reveal.initialize({ showSlideNumber: 'print' })-->
       <!--      </code></pre>-->
     </section>
+    <section id="plugins">
+      <h1>Plugins</h1>
+    </section>
+    <section>
+      <h3>Multiplex Plugin</h3>
+      <small>The multiplex plugin needs the following three things to operate:</small>
+      <ol>
+        <li>Generate a unique secret and token pair for your master and client presentations.</li>
+        <p> You can use the socket.io server at:
+          <a href="https://reveal-multiplex.glitch.me/" target="_blank">https://reveal-multiplex.glitch.me/</a>
+        </p>
+        <li>Master presentation that has control.</li>
+        <li>Client presentations that follow the master.</li>
+      </ol>
+    </section>
+    <section>
+      <h3>Getting Started</h3>
+      <ol>
+        <li>Navigate to your reveal.js folder.</li>
+        <li>npm install reveal-multiplex
+          <ul>
+            <li>node_modules/reveal-multiplex</li>
+          </ul>
+        </li>
+        <li>npm install node-static
+          <ul>
+            <li>node_modules/node-static</li>
+          </ul>
+        </li>
+        <a href="file/node_modules.zip" style="text-decoration: underline;">Download Dependencies</a>
+      </ol>
+    </section>
+    <section>
+      <h3>Multiplex Plugin - Master Presentation</h3>
+      <p>This need only be on your (the presenter's) computer.</p>
+      <pre style="font-size:18px;"><code class="hljs javascript" data-trim>
+              Reveal.initialize({
+                multiplex: {
+                  // Obtained from the socket.io server.
+                  secret: '13652805320794272084',  // Gives this (the master) control of the presentation.
+                  id: '1ea875674b17ca76', // Id, obtained from socket.io server.
+                  url: 'https://reveal-multiplex.glitch.me/' // Location of socket.io server.
+                },
+
+                // Don't forget to add the dependencies.
+                dependencies: [
+                  { src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
+                  { src: 'https://reveal-multiplex.glitch.me/master.js', async: true },
+
+                  // and if you want speaker notes.
+                  { src: 'https://unpkg.com/reveal-notes-server/client.js', async: true }
+                ]
+              });
+      </code></pre>
+    </section>
+    <section>
+      <h3>Multiplex Plugin - Client Presentation</h3>
+      <small>Your audience can then access the client presentation via:
+        <a href="https://ovidiocbba.github.io/reveal_js_presentation/" target="_blank">https://ovidiocbba.github.io/reveal_js_presentation/</a>
+      </small>
+      <pre style="font-size:18px;"><code class="hljs javascript" data-trim>
+              Reveal.initialize({
+                multiplex: {
+                  secret: null, // null so the clients do not have control of the master presentation.
+                  id: '1ea875674b17ca76', // Id, obtained from socket.io server.
+                  url: 'https://reveal-multiplex.glitch.me/' // Location of socket.io server
+                },
+
+                // Don't forget to add the dependencies.
+                dependencies: [
+                  { src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
+                  { src: 'https://reveal-multiplex.glitch.me/client.js', async: true }
+                ]
+              });
+      </code></pre>
+    </section>
   </div>
 </div>
 
@@ -793,6 +869,12 @@
           // and the menu will not attempt to load the font-awesome library.
           loadIcons: true
         },
+        multiplex: {
+          // Obtained from the socket.io server.
+          secret: null,  // Gives this (the master) control of the presentation.
+          id: 'c4e0d19f8fe468e7', // Id, obtained from socket.io server.
+          url: 'https://reveal-multiplex.glitch.me/' // Location of socket.io server.
+        },
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [
           RevealMarkdown,
@@ -803,6 +885,16 @@
           RevealMenu,
           RevealSearch
         ],
+
+        // Don't forget to add the dependencies for Multiplex plugin.
+        dependencies: [
+          { src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
+          { src: 'https://reveal-multiplex.glitch.me/master.js', async: true },
+          { src: 'https://reveal-multiplex.glitch.me/client.js', async: true },
+
+          // and if you want speaker notes.
+          { src: 'https://unpkg.com/reveal-notes-server/client.js', async: true }
+        ]
 			});
 </script>
 </body>
