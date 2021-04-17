@@ -718,7 +718,26 @@
     <section>
       <h2>Reveal Search</h2>
       <p>Press CTRL+Shift+F to search slide content.</p>
-      <p>plugin/search/search.js</p>
+      <pre><code class="hljs html" data-trim>
+            <script src="plugin/search/search.js"></script>
+            <script>
+              Reveal.initialize({
+                plugins: [ RevealSearch ]
+              });
+            </script>
+      </code></pre>
+    </section>
+    <section>
+      <h2>Reveal Zoom</h2>
+      <p>Press Alt+click to zoom in on elements.</p>
+      <pre><code class="hljs html" data-trim>
+            <script src="plugin/zoom/zoom.js"></script>
+            <script>
+              Reveal.initialize({
+                plugins: [ RevealZoom ]
+              });
+            </script>
+      </code></pre>
     </section>
   </div>
 </div>
@@ -733,6 +752,7 @@
 <script src="plugin/menu/menu.js"></script>
 <!-- Press CTRL+Shift+F to search slide content. -->
 <script src="plugin/search/search.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
 <script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -903,7 +923,8 @@
           RevealNotes,
           RevealMath,
           RevealMenu,
-          RevealSearch
+          RevealSearch,
+          RevealZoom
         ],
 
         // Don't forget to add the dependencies for Multiplex plugin.
