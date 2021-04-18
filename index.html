@@ -26,6 +26,8 @@
     .gist-file
     .gist-data {max-height: 500px;max-width: 900px;}
   </style>
+  <!-- Styles for Reveal.js plugin - mapbox-gl -->
+  <link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css'/>
 </head>
 <body>
 <div class="reveal">
@@ -885,6 +887,47 @@
         @enduml
       </code></pre>
     </section>
+    <section data-menu-title="Mapbox-gl">
+      <h2>Reveal.js - Mapbox-gl</h2>
+      <p><a href="file/mapbox-gl.zip" style="font-size:80%; text-decoration: underline;">Download Mapbox-gl plugin</a></p>
+      <p style="font-size:80%;">Add CSS import:</p>
+      <pre style="font-size:38%;"><code class="hljs html" data-trim>
+              <!-- Styles for Reveal.js Mapbox-gl plugin-->
+              <link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css'/>
+      </code></pre>
+      <p style="font-size:80%;">Add the plugins to the dependencies in your presentation</p>
+      <pre style="font-size:38%;"><code class="hljs html" data-trim>
+              <script>
+                Reveal.initialize({
+                  // ...
+                  dependencies: [
+                    // ...
+                    { src: 'https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.js' },
+                    { src: 'plugin/mapbox-gl/mapbox-gl.js'},
+                    // ...
+                  ],
+                  mapbox: {accessToken: "pk.eyJ1IjoibGlwb3YzY3ozayIsImEiOiJjamo3YXlwNTMwdHV1M3FvM3E2dmcxMWZsIn0.9Ax3qI890KLFhFTS6inMEA"}
+                });
+              </script>
+      </code></pre>
+      <a href="https://github.com/lipov3cz3k/reveal.js-mapbox-gl-plugin" style="font-size:80%;" target="_blank">https://github.com/lipov3cz3k/reveal.js-mapbox-gl-plugin</a>
+    </section>
+    <section data-mapbox='{"duration": 4000, "zoom": 14, "bearing": 73, "lat": -16.3364367, "lon": -68.0408164, "pitch": 30, "center": [-68.0408164, -16.3364367]}'>
+      Deathroad
+      <span class="fragment current-visible"
+            data-mapbox-transform-to='{"duration": 4000, "zoom": 14, "bearing": 73, "lat": -16.2896, "lon": -67.8253, "pitch": 30, "center": [-67.8253, -16.2896]}'></span>
+      <span class="fragment current-visible"
+            data-mapbox-transform-to='{"duration": 4000, "zoom": 14, "bearing": -11, "lat": -16.2561, "lon": -67.785, "pitch": 30, "center": [-67.785, -16.2561]}'></span>
+      <span class="fragment current-visible"
+            data-mapbox-transform-to='{"duration": 4000, "zoom": 14, "bearing": 73, "lat": -16.2314, "lon": -67.7935, "pitch": 30, "center": [-67.7935, -16.2314]}'></span>
+      <span class="fragment current-visible"
+            data-mapbox-transform-to='{"duration": 4000, "zoom": 14, "bearing": 70, "lat": -16.2190431, "lon": -67.7388244, "speed": 0.5, "curve": 0.4, "pitch": 60, "center": [-67.7388244, -16.2190431]}'></span>
+    </section>
+    <section data-mapbox='{"duration": 4000, "zoom": 14, "bearing": 70, "lat": -16.5199, "lon": -67.9256, "pitch": 60, "center": [-67.9256, -16.5199]}'
+             data-mapbox-trek="data/1 takesi.json">Takesi trail
+      <span class="fragment current-visible"
+            data-mapbox-transform-to='{"duration": 4000, "zoom": 14, "bearing": 70, "lat": -16.4016572, "lon": -67.7668075, "speed": 0.1, "curve": 0.4, "pitch": 60,"center": [-67.7668075, -16.4016572]}'></span>
+    </section>
   </div>
 </div>
 
@@ -1105,7 +1148,10 @@
           { src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
           { src: 'https://reveal-multiplex.glitch.me/client.js', async: true },
           { src: '//cdn.jsdelivr.net/npm/reveal-plantuml' },
-        ]
+          { src: 'https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.js' },
+		      { src: 'plugin/mapbox-gl/mapbox-gl.js'},
+        ],
+        mapbox: {accessToken: "pk.eyJ1IjoibGlwb3YzY3ozayIsImEiOiJjamo3YXlwNTMwdHV1M3FvM3E2dmcxMWZsIn0.9Ax3qI890KLFhFTS6inMEA"}
 			});
 </script>
 </body>
