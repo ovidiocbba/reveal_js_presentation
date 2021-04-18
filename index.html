@@ -624,10 +624,55 @@
       <!--          Reveal.initialize({ showSlideNumber: 'print' })-->
       <!--      </code></pre>-->
     </section>
+    <section>
+      <h2>Built-in Plugins</h2>
+      <p>These plugins are distributed together with the reveal.js repo.</p>
+    </section>
+    <section data-menu-title="Search">
+      <h2>Reveal Search</h2>
+      <p>Press CTRL+Shift+F to search slide content.</p>
+      <pre><code class="hljs html" data-trim>
+            <script src="plugin/search/search.js"></script>
+            <script>
+              Reveal.initialize({
+                plugins: [ RevealSearch ]
+              });
+            </script>
+      </code></pre>
+    </section>
+    <section data-menu-title="Zoom">
+      <h2>Reveal Zoom</h2>
+      <p>Press Alt+click to zoom in on elements.</p>
+      <pre><code class="hljs html" data-trim>
+            <script src="plugin/zoom/zoom.js"></script>
+            <script>
+              Reveal.initialize({
+                plugins: [ RevealZoom ]
+              });
+            </script>
+      </code></pre>
+    </section>
+    <section data-menu-title="Notes">
+      <h2>Reveal Notes</h2>
+      <p>There's a speaker view. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
+      <p>Press the 'S' key to try it out.</p>
+      <pre><code class="hljs html" data-trim>
+            <script src="plugin/notes/notes.js"></script>
+            <script>
+              Reveal.initialize({
+                plugins: [ RevealNotes ]
+              });
+            </script>
+      </code></pre>
+      <aside class="notes">Enter speaker notes here.</aside>
+      <pre><code class="hljs html" data-trim>
+            <aside class="notes">Enter speaker notes here.</aside>
+      </code></pre>
+    </section>
     <section id="plugins">
       <h1>Plugins</h1>
     </section>
-    <section>
+    <section data-menu-title="Multiplex">
       <h2>Multiplex Plugin</h2>
       <small>The multiplex plugin needs the following three things to operate:</small>
       <ol>
@@ -697,7 +742,7 @@
               });
       </code></pre>
     </section>
-    <section>
+    <section data-menu-title="Reveal Menu">
       <h2>Reveal.js - Menu</h2>
       <a href="file/menu.zip" style="text-decoration: underline;">Download Menu Plugin</a>
       <p>Add the plugin to the dependencies in your presentation, as below.</p>
@@ -710,51 +755,6 @@
             </script>
       </code></pre>
       <a href="https://github.com/denehyg/reveal.js-menu" target="_blank">https://github.com/denehyg/reveal.js-menu</a>
-    </section>
-    <section>
-      <h2>Built-in Plugins</h2>
-      <p>These plugins are distributed together with the reveal.js repo.</p>
-    </section>
-    <section>
-      <h2>Reveal Search</h2>
-      <p>Press CTRL+Shift+F to search slide content.</p>
-      <pre><code class="hljs html" data-trim>
-            <script src="plugin/search/search.js"></script>
-            <script>
-              Reveal.initialize({
-                plugins: [ RevealSearch ]
-              });
-            </script>
-      </code></pre>
-    </section>
-    <section>
-      <h2>Reveal Zoom</h2>
-      <p>Press Alt+click to zoom in on elements.</p>
-      <pre><code class="hljs html" data-trim>
-            <script src="plugin/zoom/zoom.js"></script>
-            <script>
-              Reveal.initialize({
-                plugins: [ RevealZoom ]
-              });
-            </script>
-      </code></pre>
-    </section>
-    <section>
-      <h2>Reveal Notes</h2>
-      <p>There's a speaker view. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-      <p>Press the 'S' key to try it out.</p>
-      <pre><code class="hljs html" data-trim>
-            <script src="plugin/notes/notes.js"></script>
-            <script>
-              Reveal.initialize({
-                plugins: [ RevealNotes ]
-              });
-            </script>
-      </code></pre>
-      <aside class="notes">Enter speaker notes here.</aside>
-      <pre><code class="hljs html" data-trim>
-            <aside class="notes">Enter speaker notes here.</aside>
-      </code></pre>
     </section>
   </div>
 </div>
