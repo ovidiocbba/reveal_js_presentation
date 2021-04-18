@@ -849,6 +849,42 @@
         My second dataset, 45, 40, 25, 4
       </canvas>
     </section>
+    <section data-menu-title="PlantUML">
+      <h2>Reveal.js - PlantUML</h2>
+      <p>You can use the plugin directly from CDN:</p>
+      <pre><code class="hljs html" data-trim>
+              <script>
+                  Reveal.initialize({
+                  // ...
+                  dependencies: [
+                    { src: '//cdn.jsdelivr.net/npm/reveal-plantuml' },
+                  ]
+                });
+              </script>
+      </code></pre>
+      <a href="https://github.com/reveal-plantuml/reveal-plantuml.github.io" style="font-size:80%;" target="_blank">https://github.com/reveal-plantuml/reveal-plantuml.github.io</a>
+    </section>
+    <section>
+      <h3>Reveal.js - PlantUML</h3>
+      <pre data-cc="false"><code class="language-plantuml">
+        @startuml
+        Alice -> Bob: Authentication Request
+        Bob --> Alice: Authentication Response
+        Alice -> Bob: Another authentication Request
+        Bob --> Alice: Another authentication Response
+        @enduml
+      </code></pre>
+    </section>
+    <section>
+      <h3>Reveal.js - PlantUML</h3>
+      <pre data-cc="false"><code class="language-plantuml">
+        @startuml
+        User -> (Start)
+        User --> (Use the application) : A small label
+        :Main Admin: ---> (Use the application) : This is\nAnother\nlabel
+        @enduml
+      </code></pre>
+    </section>
   </div>
 </div>
 
@@ -1068,6 +1104,7 @@
         dependencies: [
           { src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
           { src: 'https://reveal-multiplex.glitch.me/client.js', async: true },
+          { src: '//cdn.jsdelivr.net/npm/reveal-plantuml' },
         ]
 			});
 </script>
