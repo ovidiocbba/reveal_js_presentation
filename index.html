@@ -28,6 +28,8 @@
   </style>
   <!-- Styles for Reveal.js plugin - mapbox-gl -->
   <link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css'/>
+  <!-- Styles for Reveal.js Drawer plugin-->
+  <link rel="stylesheet" href="plugin/drawer/drawer.css" />
 </head>
 <body>
 <div class="reveal">
@@ -974,6 +976,39 @@
         }
       </script>
     </section>
+    <section data-menu-title="Drawer">
+      <h2>Reveal.js - Drawer</h2>
+      <p><a href="file/drawer.zip" style="font-size:80%; text-decoration: underline;">Download Drawer plugin</a></p>
+      <p style="font-size:80%;">Add CSS import:</p>
+      <pre><code class="hljs html" data-trim>
+              <link rel="stylesheet" href="plugin/drawer/drawer.css" />
+      </code></pre>
+      <p style="font-size:80%;">Add Script file import:</p>
+      <pre><code class="hljs html" data-trim>
+              <script src="plugin/drawer/drawer.js"></script>
+      </code></pre>
+      <p style="font-size:80%;">Add the plugin to the dependencies in your presentation.</p>
+      <pre><code class="hljs html" data-trim>
+              <script>
+                  Reveal.initialize({
+                      // ...
+                      plugins: [ RevealDrawer ],
+                      // ...
+                  });
+              </script>
+      </code></pre>
+    </section>
+    <section>
+      <h3>Reveal.js - Drawer</h3>
+      <p>Keybindings (default):</p>
+      <ul>
+        <li>T - toggle drawing board</li>
+        <li>D - toggle mode (drawing or not drawing)</li>
+        <li>Ctrl + Z - remove last line from current slide</li>
+        <li>"1", "2", "3", "4" - change selected color (base on the order)</li>
+      </ul>
+      <a href="https://github.com/burnpiro/reveal-drawer" style="font-size:80%;" target="_blank">https://github.com/burnpiro/reveal-drawer</a>
+    </section>
   </div>
 </div>
 
@@ -990,6 +1025,7 @@
 <script src="plugin/zoom/zoom.js"></script>
 <script src="plugin/chart/Chart.min.js"></script>
 <script src="plugin/chart/plugin.js"></script>
+<script src="plugin/drawer/drawer.js"></script>
 <script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -1186,7 +1222,8 @@
           RevealMenu,
           RevealSearch,
           RevealZoom,
-          RevealChart
+          RevealChart,
+          RevealDrawer
         ],
 
         // Don't forget to add the dependencies for Multiplex plugin.
