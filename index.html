@@ -1009,6 +1009,53 @@
       </ul>
       <a href="https://github.com/burnpiro/reveal-drawer" style="font-size:80%;" target="_blank">https://github.com/burnpiro/reveal-drawer</a>
     </section>
+    <section>
+      <h2>Extras</h2>
+    </section>
+    <section>
+      <h3>Extras</h3>
+      <p>Upload your presentation using GitLab Pages.</p>
+      <pre><code class="hljs yml" data-trim>
+         .gitlab-ci.yml
+      </code></pre>
+      <pre><code class="hljs yml" data-trim>
+        pages:
+          stage: deploy
+          script:
+          - mkdir .public
+          - cp -r * .public
+          - mv .public public
+          artifacts:
+            paths:
+            - public
+          only:
+          - master
+      </code></pre>
+    </section>
+    <section>
+      <h3>Extras - GitLab Pages</h3>
+      <p>To make your website publicly available, navigate to your project's
+        <strong><em>'Settings > General > Visibility'</em></strong> and select <strong><em>'Everyone'</em></strong> in pages section.</p>
+      <img data-src="img/git_lab_visibility.png" width="500" height="200">
+      <a href="https://ovidiomiranda.gitlab.io/reveal_js_presentation" style="font-size:80%;" target="_blank">https://ovidiomiranda.gitlab.io/reveal_js_presentation</a>
+    </section>
+    <section>
+      <h3>Extras - GitLab Pages</h3>
+      <dl>
+        <dt>Learn more about GitLab Pages at:</dt>
+        <dd><a href="https://pages.gitlab.io" style="font-size:80%;" target="_blank">https://pages.gitlab.io</a></dd>
+        <dt>The official documentation:</dt>
+        <dd><a href="https://docs.gitlab.com/ce/user/project/pages/" style="font-size:80%;" target="_blank">https://docs.gitlab.com/ce/user/project/pages/</a></dd>
+        <dt>Examples:</dt>
+        <dd><a href="https://gitlab.com/pages" style="font-size:80%;" target="_blank">https://gitlab.com/pages</a></dd>
+      </dl>
+    </section>
+    <section>
+      <h3>Extras</h3>
+      <p style="font-size:50%;">Upload your presentation using GitHub Pages.</p>
+      <img data-src="img/git_hub_pages.png" width="750" height="460">
+      <a href="https://ovidiocbba.github.io/reveal_js_presentation/" style="font-size:80%;" target="_blank">https://ovidiocbba.github.io/reveal_js_presentation/</a>
+    </section>
   </div>
 </div>
 
