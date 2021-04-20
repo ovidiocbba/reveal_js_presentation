@@ -895,7 +895,7 @@
               <!-- Styles for Reveal.js Mapbox-gl plugin-->
               <link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css'/>
       </code></pre>
-      <p style="font-size:80%;">Add the plugins to the dependencies in your presentation</p>
+      <p style="font-size:80%;">Add the plugin to the dependencies in your presentation</p>
       <pre style="font-size:38%;"><code class="hljs html" data-trim>
               <script>
                 Reveal.initialize({
@@ -927,6 +927,52 @@
              data-mapbox-trek="data/1 takesi.json">Takesi trail
       <span class="fragment current-visible"
             data-mapbox-transform-to='{"duration": 4000, "zoom": 14, "bearing": 70, "lat": -16.4016572, "lon": -67.7668075, "speed": 0.1, "curve": 0.4, "pitch": 60,"center": [-67.7668075, -16.4016572]}'></span>
+    </section>
+    <section data-menu-title="Quiz">
+      <h2>Reveal.js - Quiz</h2>
+      <p><a href="file/quiz.zip" style="font-size:80%; text-decoration: underline;">Download Quiz plugin</a></p>
+      <p style="font-size:80%;">Load it as a dependency in Reveal.initialize, as seen below</p>
+      <pre style="font-size:43%;"><code class="hljs html" data-trim>
+              <script>
+                  Reveal.initialize({
+                    dependencies: [
+                      // ...
+                      { src: 'plugin/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes(); } }
+                      // ...
+                    ]
+                  });
+              </script>
+      </code></pre>
+      <a href="https://gitlab.com/schaepermeier/reveal.js-quiz" style="font-size:80%;" target="_blank">https://gitlab.com/schaepermeier/reveal.js-quiz</a>
+    </section>
+    <section>
+      <script data-quiz>
+        quiz = {
+                "info": {
+                        "name":    "Test Your Knowledge!!",
+                        "main":    "Think you're smart enough to be on Jeopardy? Find out with this super crazy knowledge quiz!",
+                        "level1":  "Jeopardy Ready",
+                        "level2":  "Jeopardy Contender",
+                        "level3":  "Jeopardy Amateur",
+                        "level4":  "Jeopardy Newb",
+                        "level5":  "Stay in school, kid..." // no comma here
+                },
+                "questions": [
+                        { // Question 1 - Multiple Choice, Single True Answer
+                                "q": "What number is the letter A in the English alphabet?",
+                                "a": [
+                                        {"option": "8",      "correct": false},
+                                        {"option": "14",     "correct": false},
+                                        {"option": "1",      "correct": true},
+                                        {"option": "23",     "correct": false} // no comma here
+                                ],
+                                "correct": "<p><span>That's right!</span> The letter A is the first letter in the alphabet!</p>",
+                                "incorrect": "<p><span>Uhh no.</span> It's the first letter of the alphabet. Did you actually <em>go</em> to kindergarden?</p>" // no comma here
+                        },
+                        // more questions here
+                ]
+        }
+      </script>
     </section>
   </div>
 </div>
@@ -1150,6 +1196,7 @@
           { src: '//cdn.jsdelivr.net/npm/reveal-plantuml' },
           { src: 'https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.js' },
 		      { src: 'plugin/mapbox-gl/mapbox-gl.js'},
+		      { src: 'plugin/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({}); } },
         ],
         mapbox: {accessToken: "pk.eyJ1IjoibGlwb3YzY3ozayIsImEiOiJjamo3YXlwNTMwdHV1M3FvM3E2dmcxMWZsIn0.9Ax3qI890KLFhFTS6inMEA"}
 			});
