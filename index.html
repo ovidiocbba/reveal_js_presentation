@@ -1071,6 +1071,59 @@
       <img data-src="img/git_hub_pages.png" width="750" height="460">
       <a href="https://ovidiocbba.github.io/reveal_js_presentation/" style="font-size:80%;" target="_blank">https://ovidiocbba.github.io/reveal_js_presentation/</a>
     </section>
+    <section>
+      <h3>Markdown Support</h3>
+      <p style="font-size:80%;">Add Script file import:</p>
+      <pre><code class="hljs html" data-trim>
+          <script src="plugin/markdown/markdown.js"></script>
+      </code></pre>
+      <p style="font-size:80%;">Add the plugin to the dependencies in your presentation.</p>
+      <pre><code class="hljs html" data-trim>
+              <script>
+                Reveal.initialize({
+                    plugins: [ RevealMarkdown ]
+                  });
+              </script>
+      </code></pre>
+      <a href="https://revealjs.com/markdown/" style="font-size:80%;" target="_blank">https://revealjs.com/markdown/</a>
+    </section>
+    <section data-markdown>
+      <script type="text/template">
+        ## Markdown Support
+
+        It is possible to create content using *Markdown*.
+
+        It is used on platforms such as GitHub, GitLab, Stack Exchange or SourceForge.
+
+        More information [here](http://daringfireball.net/projects/markdown/)
+
+        ```
+        <section data-markdown>
+          ## Markdown Support
+
+          It is possible to create content using *Markdown*.
+
+          It is used on platforms such as GitHub, GitLab, Stack Exchange or SourceForge.
+
+          More information [here](http://daringfireball.net/projects/markdown/)
+        </section>
+        ```
+      </script>
+    </section>
+    <section>
+      <h3>Markdown - Code</h3>
+      <script src="https://gist.github.com/ovidiocbba/a4a333d023e038849bd81afad3973e33.js"></script>
+    </section>
+    <section>
+      <h3>Markdown - Resources</h3>
+      <ul>
+        <li><a href="https://www.markdownguide.org/basic-syntax/" style="font-size:70%;" target="_blank">https://www.markdownguide.org/basic-syntax/</a></li>
+        <p>MarkShow, A reveal.js presenter, with live editor.</p>
+        <li><a href="https://mark.show/#/" style="font-size:70%;" target="_blank">https://mark.show/#/</a></li>
+        <li><a href="https://mark.show/?source=https://mark.show/demo.md" style="font-size:70%;" target="_blank">https://mark.show/?source=https://mark.show/demo.md</a></li>
+      </ul>
+    </section>
+    </section>
     <section id="resources">
       <h2>Resources</h2>
     </section>
