@@ -769,7 +769,7 @@
       <h2>Multiplex Plugin</h2>
       <small>The multiplex plugin needs the following three things to operate:</small>
       <ol>
-        <li>Generate a unique secret and token pair for your master and client presentations.</li>
+        <li>Generate a secret_id and socket_id for your master and client presentations.</li>
         <p> You can use the socket.io server at: <br>
           <a href="https://reveal-multiplex.glitch.me/" target="_blank">https://reveal-multiplex.glitch.me/</a>
         </p>
@@ -841,6 +841,8 @@
       <p>Add the plugin to the dependencies in your presentation, as below.</p>
       <pre><code class="hljs html" data-trim>
             <script src="plugin/menu/menu.js"></script>
+      </code></pre>
+      <pre><code class="hljs html" data-trim>
             <script>
               Reveal.initialize({
                 plugins: [ RevealMenu ]
@@ -856,6 +858,8 @@
       <pre style="font-size:45%;"><code class="hljs html" data-trim>
               <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js">
               <script src="plugin/copycode/copycode.js"></script>
+      </code></pre>
+      <pre style="font-size:45%;"><code class="hljs html" data-trim>
               <script>
                 Reveal.initialize({
                   // ...
@@ -869,9 +873,11 @@
       <h2>Reveal.js - Chart</h2>
       <a href="file/chart.zip" style="font-size:80%; text-decoration: underline;">Download Chart plugin</a>
       <p>Copy the files Chart.min.js and plugin.js into the plugin folder of your reveal.js presentation.</p>
+      <pre style="font-size:50%;"><code class="hljs html" data-trim>
+            <script src="plugin/chart/Chart.min.js"></script>
+            <script src="plugin/chart/plugin.js"></script>
+      </code></pre>
       <pre><code class="hljs html" data-trim>
-              <script src="plugin/chart/Chart.min.js"></script>
-              <script src="plugin/chart/plugin.js"></script>
               <script>
                   Reveal.initialize({
                       // ...
@@ -1198,7 +1204,7 @@
     </section>
     <section>
       <h3>Online Visual Editor</h3>
-      <p><a href="https://slides.com/" style="text-decoration: underline;">Slides.com</a> is an fully featured, online editor for those of you who prefer a user-friendly GUI.</p>
+      <p><a href="https://slides.com/" style="text-decoration: underline;" target="_blank">Slides.com</a> is an fully featured, online editor for those of you who prefer a user-friendly GUI.</p>
       <video controls data-autoplay data-src="video/homepage-video-editor.mp4" type="video/mp4" width="820" height="480" ></video>
     </section>
     <section id="resources">
