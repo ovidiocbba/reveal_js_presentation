@@ -92,6 +92,12 @@
     <section>
       <h3>Agenda</h3>
       <ul>
+        <li><a href="#/built_in_plugins">Built-in Plugins</a></li>
+        <ul style="font-size:70%;">
+          <li><a href="#/search">Search</a></li>
+          <li><a href="#/zoom">Zoom</a></li>
+          <li><a href="#/notes">Notes</a></li>
+        </ul>
         <li><a href="#/plugins">Plugins</a></li>
         <ul style="font-size:70%;">
           <li><a href="#/multiplex">Multiplex</a></li>
@@ -697,11 +703,14 @@
       <h2>Built-in Plugins</h2>
       <p>These plugins are distributed together with the reveal.js repo.</p>
     </section>
-    <section data-menu-title="Search">
+    <section data-menu-title="Search" id="search">
       <h2>Reveal Search</h2>
       <p>Press CTRL+Shift+F to search slide content.</p>
+      <p style="font-size:80%;">Add Script file import:</p>
       <pre><code class="hljs html" data-trim>
-            <script src="plugin/search/search.js"></script>
+              <script src="plugin/search/search.js"></script>
+      </code></pre>
+      <pre><code class="hljs html" data-trim>
             <script>
               Reveal.initialize({
                 plugins: [ RevealSearch ]
@@ -709,11 +718,14 @@
             </script>
       </code></pre>
     </section>
-    <section data-menu-title="Zoom">
+    <section data-menu-title="Zoom" id="zoom">
       <h2>Reveal Zoom</h2>
       <p>Press Alt+click to zoom in on elements.</p>
+      <p style="font-size:80%;">Add Script file import:</p>
       <pre><code class="hljs html" data-trim>
-            <script src="plugin/zoom/zoom.js"></script>
+              <script src="plugin/zoom/zoom.js"></script>
+      </code></pre>
+      <pre><code class="hljs html" data-trim>
             <script>
               Reveal.initialize({
                 plugins: [ RevealZoom ]
@@ -721,12 +733,15 @@
             </script>
       </code></pre>
     </section>
-    <section data-menu-title="Notes">
+    <section data-menu-title="Notes" id="notes">
       <h2>Reveal Notes</h2>
       <p>There's a speaker view. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
       <p>Press the 'S' key to try it out.</p>
+      <p style="font-size:80%;">Add Script file import:</p>
       <pre><code class="hljs html" data-trim>
-            <script src="plugin/notes/notes.js"></script>
+              <script src="plugin/notes/notes.js"></script>
+      </code></pre>
+      <pre><code class="hljs html" data-trim>
             <script>
               Reveal.initialize({
                 plugins: [ RevealNotes ]
