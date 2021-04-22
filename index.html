@@ -699,9 +699,10 @@
       <p style="font-size:80%;">Press the »<strong>F</strong>« on your keyboard to view your presentation in fullscreen mode. Once in fullscreen mode, press the »ESC« key to exit.</p>
       <small><b><a href="https://revealjs.com/fullscreen/" target="_blank">https://revealjs.com/fullscreen/</a></b></small>
     </section>
-    <section>
+    <section id="built_in_plugins">
       <h2>Built-in Plugins</h2>
       <p>These plugins are distributed together with the reveal.js repo.</p>
+      <small><b><a href="https://revealjs.com/plugins/" target="_blank">https://revealjs.com/plugins/</a></b></small>
     </section>
     <section data-menu-title="Search" id="search">
       <h2>Reveal Search</h2>
@@ -758,6 +759,14 @@
     </section>
     <section data-menu-title="Multiplex" id="multiplex">
       <h2>Multiplex Plugin</h2>
+      <p>The multiplex plugin allows your audience to view the slides of the presentation you are controlling on their own phone, tablet or laptop.</p>
+      <p>As the master presentation navigates the slides, all client presentations will update in real time.</p>
+      <a href="https://github.com/reveal/multiplex" target="_blank">https://github.com/reveal/multiplex</a><br>
+      <p>Client presentation:</p>
+      <small><b><a href="https://ovidiocbba.github.io/reveal_js_presentation/" target="_blank">https://ovidiocbba.github.io/reveal_js_presentation/</a></b></small>
+    </section>
+    <section>
+      <h2>Multiplex Plugin</h2>
       <small>The multiplex plugin needs the following three things to operate:</small>
       <ol>
         <li>Generate a unique secret and token pair for your master and client presentations.</li>
@@ -767,7 +776,6 @@
         <li>Master presentation that has control.</li>
         <li>Client presentations that follow the master.</li>
       </ol>
-      <a href="https://github.com/reveal/multiplex" target="_blank">https://github.com/reveal/multiplex</a>
     </section>
     <section>
       <h3>Multiplex Plugin - Getting Started</h3>
@@ -783,7 +791,7 @@
             <li>node_modules/node-static</li>
           </ul>
         </li>
-        <a href="file/node_modules.zip" style="text-decoration: underline;">Download Dependencies</a>
+        <center><a href="file/node_modules.zip" style="text-decoration: underline;">Download Multiplex Dependencies</a></center>
       </ol>
     </section>
     <section>
