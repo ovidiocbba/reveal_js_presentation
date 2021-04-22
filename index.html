@@ -215,13 +215,17 @@
     </section>
     <section>
       <h3>Pretty Code</h3>
-      <p>Make sure that a syntax highlight theme is included in your document. We include Monokai by default.</p>
-      <pre><code class="hljs html" data-trim>
+      <p style="font-size:80%;">Make sure that a syntax highlight theme is included.</p>
+      <p style="font-size:80%;">Add CSS import:</p>
+      <pre style="font-size:50%;"><code class="hljs html" data-trim>
             <!-- Theme used for syntax highlighting of code -->
             <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme"/>
-
-            <script src="plugin/highlight/highlight.js"></script>
-
+      </code></pre>
+      <p style="font-size:80%;">Add Script file import:</p>
+      <pre style="font-size:50%;"><code class="hljs html" data-trim>
+              <script src="plugin/highlight/highlight.js"></script>
+      </code></pre>
+      <pre style="font-size:50%;"><code class="hljs html" data-trim>
             <script>
               Reveal.initialize({
                 plugins: [ RevealHighlight ]
@@ -232,6 +236,7 @@
     <section>
       <h3>Pretty Code</h3>
       <pre><code data-trim class="hljs html">
+        <script type="text/template">
         <section>
           <h2>Pretty Code</h2>
           <pre><code class="hljs java" data-trim>
@@ -240,6 +245,7 @@
                 }
           </code></pre>
         </section>
+        </script>
       </code></pre>
       <p>Code syntax highlighting courtesy of <a href="https://highlightjs.org/usage/" target="_blank">highlight.js</a>.</p>
       <pre><code class="hljs java" data-trim>
@@ -247,10 +253,11 @@
               return (int) IntStream.of(marks).average().orElse(Double.NaN);
             }
       </code></pre>
+      <small><b><a href="https://revealjs.com/code/" target="_blank" style="font-size:100%;">https://revealjs.com/code/</a></b></small>
     </section>
     <section>
       <h3>Pretty Code</h3>
-      <pre data-cc="false"><code class="hljs java" data-trim data-line-numbers="2|3-6|7|8-9">
+      <pre style="font-size:50%;"><code class="hljs java" data-trim data-line-numbers="2|3-6|7|8-9">
             public Boolean validate(String eanCode) {
                 String twelveDigits = eanCode.substring(0, eanCode.length() - 1);
                 int result = Stream.of(twelveDigits.split(""))
@@ -262,20 +269,26 @@
                 return calcChecksum == lastNumber;
             }
       </code></pre>
-      <pre data-cc="false"><code class="hljs html" data-trim>
-      <pre><code class="hljs java" data-trim data-line-numbers="2|3-6|7|8-9">
-           Example code.
-      </code></pre>
+      <pre style="font-size:50%;"><code class="hljs html" data-trim>
+        <script type="text/template">
+            <pre><code class="hljs java" data-trim data-line-numbers="2|3-6|7|8-9">
+                 Example code.
+            </code></pre>
+        </script>
        </code></pre>
+      <small><b><a href="https://revealjs.com/code/#step-by-step-highlights" target="_blank">https://revealjs.com/code/#step-by-step-highlights</a></b></small>
     </section>
     <section id="math">
       <h1>Math</h1>
     </section>
     <section>
       <h3>Math</h3>
-      <pre><code data-trim class="hljs html">
-          <script src="plugin/math/math.js"></script>
-
+      <p style="font-size:80%;">If you want to display math equations in your presentation you can easily do so with the MathJax plugin</p>
+      <p style="font-size:80%;">Add Script file import:</p>
+      <pre style="font-size:50%;"><code class="hljs html" data-trim>
+            <script src="plugin/math/math.js"></script>
+      </code></pre>
+      <pre style="font-size:50%;"><code data-trim class="hljs html">
           <script>
             Reveal.initialize({
               math: {
@@ -288,6 +301,7 @@
             });
           </script>
       </code></pre>
+      <small><b><a href="https://revealjs.com/math/" target="_blank">https://revealjs.com/math/</a></b></small>
     </section>
     <section>
       <h3>Math</h3>
