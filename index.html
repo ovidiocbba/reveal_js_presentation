@@ -855,11 +855,15 @@
       <h2>Copy Code</h2>
       <a href="file/copycode.zip" style="font-size:80%; text-decoration: underline;">Download CopyCode plugin</a>
       <p>Copy the copycode folder to the plugins folder of the reveal.js folder.</p>
-      <pre style="font-size:45%;"><code class="hljs html" data-trim>
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js">
+      <pre style="font-size:40%;"><code class="hljs html" data-trim>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
               <script src="plugin/copycode/copycode.js"></script>
       </code></pre>
-      <pre style="font-size:45%;"><code class="hljs html" data-trim>
+      <p style="font-size:80%;">Add CSS import:</p>
+      <pre style="font-size:38%;"><code class="hljs html" data-trim>
+               <link rel="stylesheet" href="plugin/copycode/copycode.css">
+      </code></pre>
+      <pre style="font-size:40%;"><code class="hljs html" data-trim>
               <script>
                 Reveal.initialize({
                   // ...
